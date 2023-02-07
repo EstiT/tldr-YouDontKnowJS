@@ -72,7 +72,7 @@ let x = ‘world’;
 let s = `hello ${x}`; // hello world
 ```
 
-**Modules** - way to organize code into reusable and isolated units that can be imported to be used by other parts of an application.Example below math.js is a module that exports two functions
+**Modules** - way to organize code into reusable and isolated units that can be imported to be used by other parts of an application. Example below math.js is a module that exports two functions
 ```
 // math.js
 export function add(a, b) {
@@ -102,10 +102,12 @@ class Person {
         console.log(`Hello, my name is ${this.name}.`);
     }
 }
+```
 
-Generators - functions that can be paused and resumed multiple times.Allow for iterators to be created and controlled.Define them using function*
-    Ex1 :
-    function* generator() {
+**Generators** - functions that can be paused and resumed multiple times.Allow for iterators to be created and controlled. Define them using `function*`
+ ```  
+ // Ex1 :
+ function* generator() {
     yield 1;
     yield 2;
     yield 3;
@@ -117,7 +119,7 @@ console.log(iterator.next().value); // Output: 2
 console.log(iterator.next().value); // Output: 3
 
 
-Ex 2:
+// Ex 2:
 function* range(start, end) {
     while (start <= end) {
         yield start++;
@@ -136,7 +138,7 @@ for (let value of range(1, 5)) {
 
 ```
 
-**Proxies** - an object that acts as a mediator between the original object and the code that it interacts with, can enhance and customize the interactions between objects and the code that uses them.Can be one of 13 different traps.Most commonly used are get, set, and apply
+**Proxies** - an object that acts as a mediator between the original object and the code that it interacts with, can enhance and customize the interactions between objects and the code that uses them.Can be one of 13 different traps. Most commonly used are get, set, and apply
 
 ```
 // Ex 1: object validation - set
